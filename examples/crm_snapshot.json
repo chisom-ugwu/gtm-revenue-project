@@ -1,0 +1,95 @@
+{
+  "extracted_at": "2026-06-28T19:15:53.227598Z",
+  "stages": {
+    "appointmentscheduled": {
+      "label": "Appointment Scheduled",
+      "win_probability": 0.2
+    },
+    "qualifiedtobuy": {
+      "label": "Qualified To Buy",
+      "win_probability": 0.4
+    },
+    "presentationscheduled": {
+      "label": "Presentation Scheduled",
+      "win_probability": 0.6
+    },
+    "decisionmakerboughtin": {
+      "label": "Decision Maker Bought-In",
+      "win_probability": 0.8
+    },
+    "contractsent": {
+      "label": "Contract Sent",
+      "win_probability": 0.9
+    },
+    "closedwon": {
+      "label": "Closed Won",
+      "win_probability": 1.0
+    },
+    "closedlost": {
+      "label": "Closed Lost",
+      "win_probability": 0.0
+    }
+  },
+  "deals": [
+    {
+      "id": "sim_deal_1",
+      "name": "Acme Corp Enterprise Expansion",
+      "amount": 120000.0,
+      "stage": "closedwon",
+      "pipeline": "default",
+      "created_date": "2026-01-15T09:00:00Z",
+      "close_date": "2024-03-20T17:00:00Z",
+      "last_modified": "2026-03-20T17:00:00Z"
+    },
+    {
+      "id": "sim_deal_2",
+      "name": "Beta Inc Integration",
+      "amount": 30000.0,
+      "stage": "closedwon",
+      "pipeline": "default",
+      "created_date": "2026-03-10T10:00:00Z",
+      "close_date": "2024-04-12T18:00:00Z",
+      "last_modified": "2026-04-12T18:00:00Z"
+    },
+    {
+      "id": "sim_deal_3",
+      "name": "Gamma Corp CRM Modernization",
+      "amount": 90000.0,
+      "stage": "contractsent",
+      "pipeline": "default",
+      "created_date": "2026-05-01T11:00:00Z",
+      "close_date": "2026-07-15T12:00:00Z",
+      "last_modified": "2026-06-20T14:30:00Z"
+    },
+    {
+      "id": "sim_deal_4",
+      "name": "Delta Ltd Tier 1 Support Pack",
+      "amount": 50000.0,
+      "stage": "presentationscheduled",
+      "pipeline": "default",
+      "created_date": "2026-05-15T08:30:00Z",
+      "close_date": "2026-08-01T17:00:00Z",
+      "last_modified": "2026-06-25T11:00:00Z"
+    },
+    {
+      "id": "sim_deal_5",
+      "name": "Epsilon Group Custom API Portal",
+      "amount": 110000.0,
+      "stage": "decisionmakerboughtin",
+      "pipeline": "default",
+      "created_date": "2026-06-02T14:00:00Z",
+      "close_date": "2026-09-01T17:00:00Z",
+      "last_modified": "2026-06-27T09:15:00Z"
+    },
+    {
+      "id": "sim_deal_6",
+      "name": "Zeta Systems Cloud Migration",
+      "amount": 60000.0,
+      "stage": "closedlost",
+      "pipeline": "default",
+      "created_date": "2026-02-01T09:00:00Z",
+      "close_date": "2026-04-15T17:00:00Z",
+      "last_modified": "2026-04-15T17:00:00Z"
+    }
+  ]
+}

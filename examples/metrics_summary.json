@@ -1,0 +1,39 @@
+{
+  "target_arr": 1000000.0,
+  "closed_won": 150000.0,
+  "closed_lost": 60000.0,
+  "remaining_target": 850000.0,
+  "open_pipeline": 250000.0,
+  "weighted_pipeline": 199000.0,
+  "pipeline_coverage_ratio": 0.29,
+  "weighted_pipeline_coverage_ratio": 0.23,
+  "average_sales_cycle_days": 60.0,
+  "stage_velocity": {
+    "closedwon": {
+      "label": "Closed Won",
+      "avg_days": 60.0,
+      "deal_count": 2
+    },
+    "contractsent": {
+      "label": "Contract Sent",
+      "avg_days": 50.0,
+      "deal_count": 1
+    },
+    "presentationscheduled": {
+      "label": "Presentation Scheduled",
+      "avg_days": 41.0,
+      "deal_count": 1
+    },
+    "decisionmakerboughtin": {
+      "label": "Decision Maker Bought-In",
+      "avg_days": 24.0,
+      "deal_count": 1
+    },
+    "closedlost": {
+      "label": "Closed Lost",
+      "avg_days": 73.0,
+      "deal_count": 1
+    }
+  },
+  "total_deals_analyzed": 6
+}
