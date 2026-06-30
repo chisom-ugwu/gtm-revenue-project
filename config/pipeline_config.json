@@ -1,0 +1,8 @@
+{
+  "target_arr": 1000000.0,
+  "pipeline_id": "default",
+  "data_normalization": {
+    "handle_inverted_dates": true,
+    "default_sales_cycle_days": 60
+  }
+}
