@@ -1,0 +1,44 @@
+name: GTM Revenue Intelligence Weekly Run
+
+on:
+  schedule:
+    # Runs at 08:00 UTC every Monday morning
+    - cron: '0 8 * * 1'
+  workflow_dispatch: # Allows manual execution from the GitHub UI
+
+jobs:
+  run-gtm-intelligence:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install Dependencies
+        run: |
+          pip install requests python-dotenv google-generativeai openai
+
+      - name: Run GTM Pipeline & Send Alerts
+        env:
+          HUBSPOT_ACCESS_TOKEN: ${{ secrets.HUBSPOT_ACCESS_TOKEN }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: |
+          # 1. Extract CRM Snapshot
+          python tools/extract_hubspot_data.py
+          
+          # 2. Calculate Coverage & Velocity Metrics
+          python tools/calculate_gtm_metrics.py
+          
+          # 3. Invoke Pipeline & Forecast AI Agents
+          python tools/run_gtm_agents.py
+          
+          # 4. Dispatch Executive Briefing to Slack
+          python tools/send_slack_alert.py
